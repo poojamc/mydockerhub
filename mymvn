@@ -1,0 +1,7 @@
+FROM ubuntu:latest
+RUN apt update
+RUN apt install maven -y
+RUN mvn --version
+RUN apt install git -y
+RUN git --version
+
