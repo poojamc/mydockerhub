@@ -1,0 +1,9 @@
+FROM  ubuntu:latest
+RUN apt update
+RUN apt install openjdk-8-jdk -y
+RUN apt install wget -y
+WORKDIR /opt
+ADD https://dlcdn.apache.org/tomcat/tomcat-8/v8.5.90/bin/apache-tomcat-8.5.90.tar.gz .
+RUN tar -xvvf apache-tomcat-8.5.90.tar.gz
+EXPOSE 8085
+CMD ["/opt/apache-tomcat-8.5.90/bin/catalina.sh", "run"]
