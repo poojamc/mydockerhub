@@ -1,0 +1,7 @@
+FROM ubuntu:22.10
+RUN apt update
+Run mkdir dir1
+WORKDIR dir1
+RUN touch new.txt
+run echo "hi hello how r u" > new.txt
+
