@@ -4,4 +4,4 @@ RUN apt install maven -y
 RUN mvn --version
 RUN apt install git -y
 RUN git --version
-
+RUN mvn clean package
