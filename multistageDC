@@ -1,0 +1,7 @@
+FROM alpine as git
+RUN apk add git
+FROM git as fetch
+WORKDIR /repo
+RUN git clone https://github.com/poojamc/scheme1.git
+FROM nginx as site
+COPY --from=fetch /repo /usr/share/nginx/html
